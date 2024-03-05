@@ -1,0 +1,22 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form p {
+    font-style: normal !important;
+    margin-block: 0;
+    text-align: right !important;
+    color: var(--color-green) !important;
+  }
+
+form input {
+    height: 18px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+form input:focus {
+    outline: solid var(--color-green);
+}

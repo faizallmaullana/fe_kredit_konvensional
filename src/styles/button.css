@@ -1,0 +1,14 @@
+button {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--color-green);
+    border: 0;
+    border-radius: 7px;
+  }
+
+
+button:focus {
+    background-color: var(--color-blue);
+  }
