@@ -5,3 +5,84 @@
     border-radius: 10px;
     box-shadow: 0 1px 7px -2px #c2c2c2;
 }
+
+.card h3 {
+    color: var(--color-blue) !important;
+}
+
+.blue {
+    background-color: var(--color-blue) !important;
+}
+
+
+.card img {
+    height: 40px;
+}
+
+.card .divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 30px;
+}
+
+.card .divider .left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card .divider h1 {
+    font-size: 24px;
+}
+
+.card .divider p {
+    font-weight: 500;
+    margin-block-start: 5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card h3,
+.card p {
+    text-align: left;
+}
+
+.card p {
+    margin-block: 0;
+}
+
+.card span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card h4 {
+    color: white;
+    background-color: var(--color-green);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.card h3 {
+    color: var(--color-green);
+    margin-block: 0.5em;
+}
+
+button {
+    width: 100%;
+}
+
+.card span h2 {
+    margin-block-start: 0;
+}
+
+#periode {
+    font-weight: 500;
+}

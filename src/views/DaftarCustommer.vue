@@ -1,41 +1,87 @@
 <template>
-  <h2>Daftar Custommer</h2>
-  <p>Di sini ada pilihan, Lunas, Belum Lunas, Semua Data, dan Tagihan Hari ini</p>
-
-  <div class="card">
-    <div class="head">
-      <h3>Paisal Tanjung</h3>
-      <p>08XXX | Margahayu</p>
+  <div class="card blue">
+    <div class="divider">
+      <div class="left-content">
+        <img src="@/assets/icons/group.png" alt="customer">
+        <p>Customer</p>
+      </div>
+      <div class="right-content">
+        <h1>34 Aktif</h1>
+        <p>Total 50 Customer</p>
+      </div>
     </div>
 
-    <span>
-      <p id="periode">Mingguan</p>
-      <p>setiap Senin</p>
-    </span>
-
-    <div class="list">
-      <span>
-        <p>Vivo Y83</p>
-        <p>20.000</p>
-      </span>
-
-      <span>
-        <p>Vivo Y83</p>
-        <p>30.000</p>
-      </span>
+    <div class="divider">
+      <div class="left-content">
+        <img src="@/assets/icons/statistics.png" alt="wallet">
+        <p>KreditKu</p>
+      </div>
+      <div class="right-content">
+        <h1>Rp100.000.000</h1>
+      </div>
     </div>
-
-
-    <button>Bayar</button>
   </div>
 
-  <div class="card">
+  <!-- search bar -->
+  <div class="search">
+    <input type="text" placeholder="Cari nama custommer...">
+    <img src="@/assets/icons/search.png" alt="Search">
+  </div>
+
+  <!-- cards -->
+  <div class="card row">
     <div class="head">
       <h3>Paisal Tanjung</h3>
-      <p>08XXX | Margahayu</p>
+      <p>085109832164 | Margahayu Bekasi Timur</p>
     </div>
 
-    <h4>Lunas</h4>
+    <div class="shape">
+      <p>Rp2.300.000</p>
+    </div>
+  </div>
+
+  <div class="card row">
+    <div class="head">
+      <h3>Paisal Tanjung</h3>
+      <p>085109832164 | Margahayu Bekasi Timur</p>
+    </div>
+
+    <div class="shape">
+      <p>Rp2.300.000</p>
+    </div>
+  </div>
+
+  <div class="card row">
+    <div class="head">
+      <h3>Paisal Tanjung</h3>
+      <p>085109832164 | Margahayu Bekasi Timur</p>
+    </div>
+
+    <div class="shape">
+      <p>Rp2.300.000</p>
+    </div>
+  </div>
+
+  <div class="card row">
+    <div class="head">
+      <h3>Paisal Tanjung</h3>
+      <p>085109832164 | Margahayu Bekasi Timur</p>
+    </div>
+
+    <div class="shape">
+      <p>Rp2.300.000</p>
+    </div>
+  </div>
+
+  <div class="card row">
+    <div class="head">
+      <h3>Paisal Tanjung</h3>
+      <p>085109832164 | Margahayu Bekasi Timur</p>
+    </div>
+
+    <div class="shape">
+      <p>Lunas</p>
+    </div>
   </div>
 </template>
 
@@ -50,44 +96,25 @@ export default {
 <style scoped>
 @import url(@/styles/card.css);
 @import url(@/styles/button.css);
-
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.card h3,
-.card p {
-  text-align: left;
-}
-
-.card p {
-  margin-block: 0;
-}
-
-.card span {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card h4 {
-  color: white;
-  background-color: var(--color-blue);
-  padding: 10px;
-  border-radius: 3px;
-}
+@import url(@/styles/search.css);
 
 .card h3 {
-  color: var(--color-green);
-  margin-block: 0.5em;
+  margin-block-start: 0;
 }
 
-button {
-  width: 100%;
+.row {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center;
 }
 
-#periode {
-  font-weight: 500;
+.card .shape p {
+  font-weight: 900;
+}
+
+.card .divider h1 {
+  margin-block: 0;
+  text-align: right;
 }
 </style>

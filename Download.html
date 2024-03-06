@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup Data Download</title>
+</head>
+<body>
+    <h1>Backup Data Download</h1>
+    <button id="downloadButton">Download Backup Data</button>
+
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Send a GET request to the server to initiate download
+            fetch("http://localhost:8000/api/v1/db/export")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to download backup data');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                // Create a temporary anchor element to initiate download
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                // Set the filename for the downloaded file
+                a.download = 'backup_data.json';
+                document.body.appendChild(a);
+                a.click();
+                // Remove the temporary anchor element
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error('Backup download failed:', error);
+                alert('Failed to download backup data');
+            });
+        });
+    </script>
+</body>
+</html>
+

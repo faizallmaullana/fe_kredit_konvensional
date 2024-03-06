@@ -1,7 +1,7 @@
 <template>
   <span>
     <div class="card">
-      <RegistrationForm />
+      <RegistrationForm role="admin"/>
     </div>
   </span>
 </template>

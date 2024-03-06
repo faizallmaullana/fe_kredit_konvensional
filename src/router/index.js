@@ -6,15 +6,43 @@ const routes = [
     name: "LandingPage",
     component: () => import("@/views/LandingPage.vue"),
   },
+  // auth
   {
     path: "/registration",
     name: "RegistrationPage",
-    component: () => import("@/views/RegistrationPage.vue"),
+    component: () => import("@/views/authentication/RegistrationPage.vue"),
+  },
+  {
+    path: "/registration/admin",
+    name: "RegistrationAdminPage",
+    component: () => import("@/views/authentication/RegistrationAdminPage.vue"),
   },
   {
     path: "/login",
     name: "LoginPage",
-    component: () => import("@/views/LoginPage.vue"),
+    component: () => import("@/views/authentication/LoginPage.vue"),
+  },
+  // home
+  {
+    path: "/home",
+    name: "HomePage",
+    component: () => import("@/views/HomePage.vue"),
+  },
+  {
+    path: "/custommer",
+    name: "DaftarCustommer",
+    component: () => import("@/views/DaftarCustommer.vue"),
+  },
+  {
+    path: "/profile",
+    name: "ProfilePage",
+    component: () => import("@/views/ProfilePage.vue"),
+  },
+  // admin
+  {
+    path: "/admin/home",
+    name: "AdminHomePage",
+    component: () => import("@/views/admin/AdminHomePage.vue"),
   },
 ]
 

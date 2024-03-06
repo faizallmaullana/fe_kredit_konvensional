@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+</head>
+<body>
+    <h1>Download File</h1>
+    
+    <button id="downloadButton">Download main.go</button>
+    
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Create an anchor element
+            var link = document.createElement("a");
+            
+            // Set the href attribute to the URL of the file to be downloaded
+            link.href = "http://localhost:8000/api/v1/db/download";
+            
+            // Set the download attribute to specify the filename
+            link.download = "database.db";
+            
+            // Append the anchor element to the document body
+            document.body.appendChild(link);
+            
+            // Trigger a click event on the anchor element
+            link.click();
+            
+            // Remove the anchor element from the document body
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
+

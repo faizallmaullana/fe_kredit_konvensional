@@ -1,0 +1,22 @@
+/* search */
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .search input {
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .search img {
+    object-fit: scale-down;
+    width: 10%;
+  }
+  
+  /*  */

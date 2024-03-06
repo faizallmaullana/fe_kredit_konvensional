@@ -1,14 +1,29 @@
 button {
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    background-color: var(--color-green);
-    border: 0;
-    border-radius: 7px;
-  }
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--color-blue);
+  border: 0;
+  border-radius: 7px;
+}
 
 
 button:focus {
-    background-color: var(--color-blue);
-  }
+  background-color: var(--color-black);
+}
+
+.submit-button {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--color-green);
+  border: 0;
+  border-radius: 7px;
+}
+
+
+.submit-button:focus {
+  background-color: var(--color-blue);
+}

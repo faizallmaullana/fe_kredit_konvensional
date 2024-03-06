@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+    background-color: var(--color-blue);
+    color: white;
+    font-weight: 500;
+    min-height: 80px;
+    margin: 0;
+    width: calc(100vw - 30px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navigation img {
+    height: 30px;
+  }
+  
+  nav .navigation {
+    display: flex;
+    gap: 40px;
+  }
+  
+  nav p {
+    margin-block: 0;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  nav a.router-link-exact-active {
+    color: #42b983;
+  }
+  
