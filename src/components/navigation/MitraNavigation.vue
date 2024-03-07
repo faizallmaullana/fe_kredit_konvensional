@@ -3,10 +3,9 @@
     <div class="navigation">
       <img src="@/assets/icons/home.png" alt="Home" @click="goToHome">
       <img src="@/assets/icons/clipboard.png" alt="List" @click="goToList">
+      <img src="@/assets/icons/plus.png" alt="List" @click="goToNewCredit">
       <img src="@/assets/icons/user.png" alt="Profile" @click="goToProfile">
     </div>
-    <!-- <p>_____</p>
-    <h2>Nama Halaman</h2> -->
   </nav>
 </template>
 
@@ -37,7 +36,11 @@ export default {
 
     goToProfile() {
       this.$router.push({ name: 'ProfilePage' })
-    }
+    },
+
+    goToNewCredit() {
+      this.$router.push({ name: 'NewCreditPage' })
+    },
   }
 }
 </script>

@@ -14,13 +14,20 @@ export default {
     }
   },
 
-    async mounted() {
-    try {
-      const response = await axios.get("/token");
-      this.token = response.data.token
-    } catch (error) {
-      console.error(error);
+  mounted() {
+    this.getToken()
+  },
+
+  methods: {
+    async getToken() {
+      try {
+        const response = await axios.get("/token");
+        this.token = response.data.token
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }
+  },
+
 }
 </script>

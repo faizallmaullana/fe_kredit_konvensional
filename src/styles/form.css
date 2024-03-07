@@ -1,38 +1,59 @@
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 form p {
-    font-style: normal !important;
-    margin-block: 0;
-    text-align: right !important;
-    color: var(--color-black) !important;
-  }
+  font-style: normal !important;
+  margin-block: 0;
+  text-align: right !important;
+  color: var(--color-black) !important;
+}
 
 form input {
-    padding: 10px;
-    font-size: 18px;
+  padding: 10px;
+  font-size: 18px;
 }
 
 form input:focus {
-    border-style: solid;
-    border-color: var(--color-green);
+  border-style: solid;
+  border-color: var(--color-blue);
+}
+
+form select {
+  color: var(--color-black);
+  font-size: 18px;
+  padding: 10px;
 }
 
 .submit-button {
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 900;
-    color: white;
-    background-color: var(--color-green);
-    border: 0;
-    border-radius: 7px;
-  }
-  
-  
-  .submit-button:focus {
-    background-color: var(--color-blue);
-    border: none !important;
-  }
+  margin-top: 16px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 900;
+  color: white;
+  background-color: var(--color-blue);
+  border: 0;
+  border-radius: 7px;
+}
+
+
+.submit-button:focus {
+  background-color: var(--color-black);
+  border: none !important;
+}
+
+.confirmation {
+  position: fixed;
+  width: 100%;
+  height: 130vh;
+  z-index: 999999;
+  background-color: var(--color-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  transform: translatey(-12vh);
+}

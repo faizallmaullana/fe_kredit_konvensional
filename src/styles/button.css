@@ -13,17 +13,37 @@ button:focus {
   background-color: var(--color-black);
 }
 
-.submit-button {
-  padding: 15px;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  background-color: var(--color-green);
-  border: 0;
-  border-radius: 7px;
+.data-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
+.data-confirmation p {
+  font-weight: 500;
+}
 
-.submit-button:focus {
-  background-color: var(--color-blue);
+.data-confirmation button {
+  min-width: 40% !important;
+}
+
+.data-confirmation button.yes {
+  background-color: var(--color-green);
+}
+
+.data-confirmation button.not {
+  background-color: var(--color-red);
+}
+
+.data-confirmation button.yes:hover {
+  background-color: white;
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+}
+
+.data-confirmation button.not:hover {
+  background-color: white;
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
 }

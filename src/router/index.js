@@ -38,6 +38,11 @@ const routes = [
     name: "ProfilePage",
     component: () => import("@/views/ProfilePage.vue"),
   },
+  {
+    path: "/new_credit",
+    name: "NewCreditPage",
+    component: () => import("@/views/NewCreditPage.vue"),
+  },
   // admin
   {
     path: "/admin/home",

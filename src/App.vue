@@ -20,7 +20,7 @@ export default {
   computed: {
     isActivePage() {
       // Check if the current route is one of the specified pages
-      const validPages = ['HomePage', 'DaftarCustommer', 'ProfilePage'];
+      const validPages = ['HomePage', 'DaftarCustommer', 'ProfilePage', 'NewCreditPage'];
       return validPages.includes(this.$route.name);
     },
 
@@ -44,15 +44,15 @@ export default {
   padding: 0;
   margin: 0;
 
-  --color-green: #42b983;
-  --color-red: #db1010;
+  --color-green: #33ca77;
+  --color-red: #ca3333;
   --color-blue: #1f62c7;
   --color-black: #2c3e50;
+  --color-base: #f7f7f7
 
 }
 
 .body {
-  padding: 0;
   margin: 0 10px 10px 10px;
   display: flex;
   align-items: center;
@@ -83,5 +83,12 @@ h2 {
   width: 100%;
   background-color: var(--color-blue);
   color: white;
+}
+
+.red {
+  font-size: 11px !important;
+  color: var(--color-red) !important;
+  font-style: italic !important;
+  text-align: center !important;
 }
 </style>
