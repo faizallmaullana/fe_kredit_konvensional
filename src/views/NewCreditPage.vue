@@ -226,6 +226,8 @@ export default {
     },
 
     submitNewCustomer() {
+      console.log("submit new customer")
+
       const data = {
         nama_customer: this.namaCustomer,
         nomor_telpon_customer: this.nomorTelponCustomer,
@@ -248,7 +250,10 @@ export default {
     },
 
     submitData() {
+      console.log("Submit data")
       if (this.customer_type === "new_customer") {
+
+        console.log("if submitdata")
         this.submitNewCustomer()
       }
     }
