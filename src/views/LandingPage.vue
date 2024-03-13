@@ -12,7 +12,7 @@
 
 export default {
   name: 'LandingPage',
-
+  
   methods: {
     toggleToLogin() {
       this.$router.push({ name: 'LoginPage' });

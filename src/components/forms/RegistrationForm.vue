@@ -39,12 +39,15 @@ export default {
   },
 
   beforeMount() {
-    const isAuth = localStorage.getItem('isAuth')
+    const isAuth = localStorage.getItem('tokenAuth')
     const role = localStorage.getItem('role')
 
-    if(isAuth === "true") {
-      if(role === "mitra") {
-        this.$router.push({ name: 'HomePage' });
+    if (isAuth) {
+        if(role === "mitra") {
+          this.$router.push({ name: 'HomePage' });
+        }
+        if(role === "admin") {
+          this.$router.push({ name: 'AdminHomePage' });
       }
     }
   },

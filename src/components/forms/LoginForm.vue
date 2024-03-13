@@ -28,12 +28,15 @@ export default {
   },
 
   beforeMount() {
-    const isAuth = localStorage.getItem('isAuth')
+    const isAuth = localStorage.getItem('tokenAuth')
     const role = localStorage.getItem('role')
 
-    if(isAuth === "true") {
-      if(role === "mitra") {
-        this.$router.push({ name: 'HomePage' });
+    if (isAuth) {
+        if(role === "mitra") {
+          this.$router.push({ name: 'HomePage' });
+        }
+        if(role === "admin") {
+          this.$router.push({ name: 'AdminHomePage' });
       }
     }
   },
@@ -64,13 +67,17 @@ export default {
           window.location.reload();
       })
       .catch((err) => {
-        const statusCode = err.response.status
+        console.warn(err.response);
+        const statusCode = err.response;
+        console.warn(statusCode)
 
-        if(statusCode === 401) {
-          this.buttonValue = "Registrasi";
-          this.wrongInput = true;
-          this.wrongInputValue = "Nomor telpon atau password salah"
-        }
+        // if (statusCode != undefined) {
+        //   if(statusCode === 401) {
+        //     this.buttonValue = "Registrasi";
+        //     this.wrongInput = true;
+        //     this.wrongInputValue = "Nomor telpon atau password salah"
+        //   }
+        // }
       })
     }
   }

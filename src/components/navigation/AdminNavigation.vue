@@ -14,11 +14,11 @@ export default {
 
   // session handler
   beforeMount() {
-    const isAuth = localStorage.getItem('isAuth')
+    const isAuth = localStorage.getItem('tokenAuth')
     const role = localStorage.getItem('role')
 
-    if(isAuth !== "true") {
-      if(role !== "admin") {
+    if (isAuth) {
+      if (role != "admin") {
         this.$router.push({ name: 'LandingPage' });
       }
     }
